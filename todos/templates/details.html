@@ -1,0 +1,10 @@
+{% include 'partials/header.html' %}
+
+<div class="container">
+	<a href="/todos">&lt;&lt; Go Back</a>
+	<h1>{{ todo.title }}</h1>
+	<p>{{ todo.body }}</p>
+	<p>Created at: {{ todo.created_at }}</p>
+</div>
+
+{% include 'partials/footer.html' %}

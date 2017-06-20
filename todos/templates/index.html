@@ -1,0 +1,12 @@
+{% include 'partials/header.html' %}
+<div class="container">
+	<h1>My TODO list</h1>
+	<a href="/todos/add" class="btn btn-primary btn-sm">+ Add Todo</a>
+	<hr>
+	<ul class="list-group">
+		{% for todo in todos %}
+			<li class="list-group-item"><a href="/todos/details/{{ todo.id }}">{{ todo.title }}:</a> {{ todo.body }}</li>
+		{% endfor %}
+	</ul>
+</div>
+{% include 'partials/footer.html' %}
